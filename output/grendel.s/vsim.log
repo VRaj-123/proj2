@@ -1,0 +1,765 @@
+Reading pref.tcl
+
+# 2025.1_2
+
+# vsim -postsimdataflow -debugdb -c -voptargs=""+acc"" tb -do "modelsim_framework.do" -gOUTPUT_TRACE=ms.trace 
+# Start time: 19:14:29 on Dec 14,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vsim-8611) Generating debug db.
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+# ** Note: (vopt-4301) Memory core inferred for signal 'ram' width=32, depth=1024, type=RAM at location proj/src/TopLevel/mem.vhd:35
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# //  Questa Sim-64
+# //  Version 2025.1_2 linux_x86_64 Apr  7 2025
+# //
+# // Unpublished work. Copyright 2025 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_textio(body)
+# Loading std.env(body)
+# Loading work.tb(mixed)#1
+# Loading ieee.numeric_std(body)
+# Loading work.riscv_types(body)
+# Loading work.riscv_processor(structure)#1
+# Loading work.mem(rtl)#1
+# Loading work.if_id_reg(behavior)#1
+# Loading work.control_unit(behavior)#1
+# Loading work.pc_reg(behavior)#1
+# Loading work.fetch_logic(behavior)#1
+# Loading work.reg_file(structural)#1
+# Loading work.dec5to32(dataflow)#1
+# Loading work.regn(structural)#1
+# Loading work.dffg(mixed)#1
+# Loading work.mux32to1(dataflow)#1
+# Loading work.imm_gen(behavior)#1
+# Loading work.id_ex_reg(behavior)#1
+# Loading work.alu_control(behavior)#1
+# Loading work.alu(structural)#1
+# Loading work.adder_subtractor(behavior)#1
+# Loading work.barrel_shifter(structural)#1
+# Loading work.ex_mem_reg(behavior)#1
+# Loading work.load_extender(behavioral)#1
+# Loading work.mem_wb_reg(behavior)#1
+# ** Note: (vsim-8900) Creating design debug database vsim.dbg.
+# do modelsim_framework.do
+# ** Warning: NUMERIC_STD."=": metavalue detected, returning FALSE
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/U_ALU
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='U' Rd_WB=0 RegWrite_WB='U'
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/U_REGFILE/u_mux2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/U_REGFILE/u_mux2
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/U_REGFILE/u_mux1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/U_REGFILE/u_mux1
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/DMem
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 0  Instance: /tb/MyRiscv/IMem
+# ** Warning: C=1
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 0 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 0 ns  Iteration: 2  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 0 ns  Iteration: 2  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyRiscv/DMem
+# ** Note: WB_ID_BYPASS: rs1=2 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 0 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: NUMERIC_STD.TO_INTEGER: metavalue detected, returning 0
+#    Time: 0 ns  Iteration: 4  Instance: /tb/MyRiscv/IMem
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 5 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 5 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 5 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 5 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: C=2
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 20 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: C=3
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 40 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=2 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 40 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 40 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: C=4
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194304
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x55
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 60 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=2 rs2=0 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='0'
+#    Time: 60 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 60 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: C=5
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194308
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 80 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=2 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='1'
+#    Time: 80 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x268505088 RegWrData=0x0
+#    Time: 80 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: C=6
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194312
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=2
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=3
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 100 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=2 RegWrite_MEM='1' Rd_WB=2 RegWrite_WB='1'
+#    Time: 100 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 100 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=2 RegWrite_MEM='1' Rd_WB=2 RegWrite_WB='1'
+#    Time: 100 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x268505088
+#    Time: 100 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: C=7
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194316
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x23
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=2
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=3
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x268505088
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=2
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 120 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=1 rs2=12 Rd_MEM=8 RegWrite_MEM='1' Rd_WB=2 RegWrite_WB='1'
+#    Time: 120 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x268505088
+#    Time: 120 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=1 rs2=12 Rd_MEM=8 RegWrite_MEM='1' Rd_WB=2 RegWrite_WB='1'
+#    Time: 120 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 120 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: C=8
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194320
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=2
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=8
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 140 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=12 Rd_MEM=1 RegWrite_MEM='1' Rd_WB=8 RegWrite_WB='1'
+#    Time: 140 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194316 RegWrData=0x0
+#    Time: 140 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: C=9
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194324
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x111
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=8
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=1
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x4194316
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 160 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=28 Rd_MEM=1 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 160 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x0
+#    Time: 160 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=28 Rd_MEM=1 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 160 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194316
+#    Time: 160 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=28 Rd_MEM=1 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 160 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194316
+#    Time: 160 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: C=10
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194328
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x111
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=1
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x4194316
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=1
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x4194328
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x0
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 180 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=1 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 180 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194316
+#    Time: 180 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=1 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 180 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194328
+#    Time: 180 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=1 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=1 RegWrite_WB='1'
+#    Time: 180 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194328
+#    Time: 180 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: C=11
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194332
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x115
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=1
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x4194328
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=2
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 200 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=2 rs2=24 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='1'
+#    Time: 200 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194332 RegWrData=0x4194328
+#    Time: 200 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=2 rs2=24 Rd_MEM=0 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='1'
+#    Time: 200 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194332 RegWrData=0x4194328
+#    Time: 200 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: C=12
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4194336
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x19
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=2
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x4194328
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=2
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x4194328
+#    Time: 220 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=5 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='1'
+#    Time: 220 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194328
+#    Time: 220 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=5 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='1'
+#    Time: 220 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194332
+#    Time: 220 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=5 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='1'
+#    Time: 220 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x4194328 RegWrData=0x4194332
+#    Time: 220 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: C=13
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4195412
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x115
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=2
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x4194332
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x4194328
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 240 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=2 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='0'
+#    Time: 240 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 240 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x-40 RegWrData=0x4194332
+#    Time: 240 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=2 RegWrite_MEM='1' Rd_WB=0 RegWrite_WB='0'
+#    Time: 240 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 240 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x-40 RegWrData=0x4194328
+#    Time: 240 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: C=14
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4195416
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x4194328
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=2
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='1'
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x-40
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 260 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=2 RegWrite_WB='1'
+#    Time: 260 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x4194328
+#    Time: 260 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=2 RegWrite_WB='1'
+#    Time: 260 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 260 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x-40
+#    Time: 260 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=2 RegWrite_WB='1'
+#    Time: 260 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 260 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x-40
+#    Time: 260 ns  Iteration: 5  Instance: /tb/MyRiscv
+# ** Warning: C=15
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4195420
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=2
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='1'
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x-40
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 280 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 280 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -40 is not in bounds of subtype NATURAL.
+#    Time: 280 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x-40
+#    Time: 280 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 280 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 280 ns  Iteration: 4  Instance: /tb/MyRiscv
+# ** Warning: C=16
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: PC_ID=0x4195424
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Inst_ID(opcode)=0x0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_WB=0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_WB='0'
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_WB=0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrData=0x0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_WB=0x-1
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: Rd_MEM=0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RegWrite_MEM='0'
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: MemtoReg_MEM=0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: ALUResult_MEM=0x0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: (vsim-151) NUMERIC_STD.TO_INTEGER: Value -2 is not in bounds of subtype NATURAL.
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: LoadData_MEM=0x-1
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD1_EX=0x0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Warning: RD2_EX=0x0
+#    Time: 300 ns  Iteration: 1  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: rs1=0 rs2=0 Rd_MEM=0 RegWrite_MEM='0' Rd_WB=0 RegWrite_WB='0'
+#    Time: 300 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: WB_ID_BYPASS: mem_wr_data=0x0 RegWrData=0x0
+#    Time: 300 ns  Iteration: 3  Instance: /tb/MyRiscv
+# ** Note: Data structure takes 54510088 bytes of memory
+#          Process time 0.04 seconds
+#          stop
+#    Time: 320 ns  Iteration: 1  Instance: /tb
+# Break in Process P_DUMP_STATE at /home/veda/Downloads/submit_proj2_sw-2/internal/testpy/tb.vhd line 150
+# Stopped at /home/veda/Downloads/submit_proj2_sw-2/internal/testpy/tb.vhd line 150
+# End time: 19:14:31 on Dec 14,2025, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 286

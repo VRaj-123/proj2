@@ -1,0 +1,256 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11e vcom 2025.1_2 2025.04, Apr  7 2025
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src
+T_opt
+!s110 1765181515
+V0NIl0QTOBiP_F8n5;e_@>1
+04 22 2 work tb_update_pipeline_reg tb 1
+=1-000ae431a4f1-6936884b-8772f-96f83
+R1
+!s12f OEM100
+!s12b OEM100
+!s124 OEM100
+!s135 nogc
+o-quiet -auto_acc_if_foreign -work work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2025.1_2;82
+Efs_ex_mem_reg
+Z3 w1765159993
+Z4 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z5 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z6 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 0
+R2
+Z7 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd
+Z8 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd
+l0
+L9 1
+V;o6A2jnb0NFjh]lbLOJZd2
+!s100 Z^F3c^IdUh]fz;]0iN2TH0
+Z9 OL;C;2025.1_2;82
+32
+Z10 !s110 1765177636
+!i10b 1
+Z11 !s108 1765177636.000000
+Z12 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd|
+Z13 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd|
+!i113 0
+Z14 o-work work
+Z15 tExplicit 1 CvgOpt 0
+Abehavior
+R4
+R5
+R6
+Z16 DEx4 work 13 fs_ex_mem_reg 0 22 ;o6A2jnb0NFjh]lbLOJZd2
+!i122 0
+l66
+L49 104
+V778<odBEoKHiY:9Ai772S3
+!s100 3PR4gHlLlIT:UX8WoVaZo0
+R9
+32
+R10
+!i10b 1
+R11
+R12
+R13
+!i113 0
+R14
+R15
+Efs_id_ex_reg
+Z17 w1765159988
+R4
+R5
+R6
+!i122 1
+R2
+Z18 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd
+Z19 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd
+l0
+L9 1
+VFNd<gY@YN5oETTeI1zWSW1
+!s100 M6:aYCcZ<h?AMADX>H^1z0
+R9
+32
+Z20 !s110 1765177638
+!i10b 1
+Z21 !s108 1765177637.000000
+Z22 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd|
+Z23 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R4
+R5
+R6
+Z24 DEx4 work 12 fs_id_ex_reg 0 22 FNd<gY@YN5oETTeI1zWSW1
+!i122 1
+l103
+L73 176
+Vf7ZeAYQL`2Ab7`SYcI_So2
+!s100 3^DU7[EC8[<n_^C_gc@Wi2
+R9
+32
+R20
+!i10b 1
+R21
+R22
+R23
+!i113 0
+R14
+R15
+Efs_if_id_reg
+Z25 w1765159982
+R4
+R5
+R6
+!i122 2
+R2
+Z26 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd
+Z27 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd
+l0
+Z28 L10 1
+VX;P7K1T4gPLHRnLNY`R6m2
+!s100 YYDXhmG]QPV^ojzVWQ]782
+R9
+32
+Z29 !s110 1765177639
+!i10b 1
+Z30 !s108 1765177639.000000
+Z31 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd|
+Z32 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R4
+R5
+R6
+Z33 DEx4 work 12 fs_if_id_reg 0 22 X;P7K1T4gPLHRnLNY`R6m2
+!i122 2
+l36
+L28 39
+VAVIJZNJ<P?5fiLoKTAX?n1
+!s100 9HbYl1TOdo:?@aCekKo__1
+R9
+32
+R29
+!i10b 1
+R30
+R31
+R32
+!i113 0
+R14
+R15
+Efs_mem_wb_reg
+Z34 w1765159998
+R4
+R5
+R6
+!i122 3
+R2
+Z35 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd
+Z36 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd
+l0
+R28
+VSg30JJhdg>EfRo2X4LD<X2
+!s100 2R1Pf5]Rd5NY>7MPPY5PF1
+R9
+32
+Z37 !s110 1765177641
+!i10b 1
+Z38 !s108 1765177641.000000
+Z39 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd|
+Z40 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd|
+!i113 0
+R14
+R15
+Abehavior
+R4
+R5
+R6
+Z41 DEx4 work 13 fs_mem_wb_reg 0 22 Sg30JJhdg>EfRo2X4LD<X2
+!i122 3
+l61
+L46 89
+VM<JoV?4hi?;dSL09fcOlh3
+!s100 T3L2Ak;6@8f[Q<GE1;lWd0
+R9
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 0
+R14
+R15
+Etb_update_pipeline_reg
+Z42 w1765181487
+R4
+R5
+R6
+!i122 12
+R2
+Z43 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd
+Z44 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd
+l0
+L5 1
+V]_P?Ecz^mdPfEbFLzNI<b0
+!s100 D7XBCb]C9LBJzCBY:9IS=1
+R9
+32
+Z45 !s110 1765181501
+!i10b 1
+Z46 !s108 1765181501.000000
+Z47 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd|
+Z48 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd|
+!i113 0
+R14
+R15
+Atb
+R41
+R16
+R24
+R33
+R4
+R5
+R6
+DEx4 work 22 tb_update_pipeline_reg 0 22 ]_P?Ecz^mdPfEbFLzNI<b0
+!i122 12
+l135
+L8 556
+V`h;6lSiUlOg@NX:N1ZW^o0
+!s100 2gB5FT_Q_?UAl=WK6?EnE1
+R9
+32
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 0
+R14
+R15

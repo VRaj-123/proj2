@@ -1,0 +1,354 @@
+m255
+K4
+z2
+!s12c _opt2
+Z0 !s99 nomlopt
+!s12c _opt1
+R0
+Z1 !s12c _opt
+R0
+R1
+R0
+R1
+R0
+!s11e MIXED_VERSIONS
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 d/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel
+T_opt
+!s110 1765162741
+VhLCPNI<9zlQchomecTEee2
+04 22 2 work tb_update_pipeline_reg tb 1
+=1-000ae431a4f1-69363ef5-3ce5b-84c4
+R0
+Z3 !s12f OEM100
+Z4 !s12b OEM100
+Z5 !s124 OEM100
+Z6 !s135 nogc
+Z7 o-quiet -auto_acc_if_foreign -work work +acc
+Z8 tCvgOpt 0
+n@_opt
+Z9 OL;O;2025.1_2;82
+R2
+T_opt1
+!s110 1765266866
+V2EN7J661QB6cFc<bkmCTE1
+Z10 04 20 3 work tb_pipeline_regs_all sim 1
+=1-000ae431a4f1-6937d5b2-46c4-25444
+R0
+R3
+R4
+R5
+R6
+R7
+R8
+n@_opt1
+R9
+R2
+T_opt2
+!s110 1765266974
+V_>e2egc8FC=2E_Z8?n4ei3
+R10
+=1-000ae431a4f1-6937d61d-cf32a-2551f
+R0
+R3
+R4
+R5
+R6
+o-quiet -auto_acc_if_foreign -work work
+R8
+n@_opt2
+R9
+Efs_ex_mem_reg
+Z11 w1765266778
+Z12 DPx4 ieee 11 numeric_std 0 22 aU^R8eGcicLcUFIaBQSL>3
+Z13 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z14 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+!i122 21
+R2
+Z15 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd
+Z16 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd
+l0
+L9 1
+Va=a:BI83T?XBWkljeLmWg1
+!s100 jU8foj;67UA]VKze;NXzf1
+Z17 OL;C;2025.1_2;82
+32
+Z18 !s110 1765266848
+!i10b 1
+Z19 !s108 1765266848.000000
+Z20 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd|
+Z21 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_ex_mem_reg.vhd|
+!i113 0
+Z22 o-work work
+Z23 tExplicit 1 CvgOpt 0
+Abehavior
+R12
+R13
+R14
+Z24 DEx4 work 13 fs_ex_mem_reg 0 22 a=a:BI83T?XBWkljeLmWg1
+!i122 21
+l72
+L52 117
+VZE9Phd`5Gi?H]`MhQQi?l1
+!s100 6CdXL1`cjY81WWMRO>LiO1
+R17
+32
+R18
+!i10b 1
+R19
+R20
+R21
+!i113 0
+R22
+R23
+Efs_id_ex_reg
+Z25 w1765266770
+R12
+R13
+R14
+!i122 22
+R2
+Z26 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd
+Z27 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd
+l0
+L9 1
+VFNd<gY@YN5oETTeI1zWSW1
+!s100 M6:aYCcZ<h?AMADX>H^1z0
+R17
+32
+Z28 !s110 1765266849
+!i10b 1
+Z29 !s108 1765266849.000000
+Z30 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd|
+Z31 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_id_ex_reg.vhd|
+!i113 0
+R22
+R23
+Abehavior
+R12
+R13
+R14
+Z32 DEx4 work 12 fs_id_ex_reg 0 22 FNd<gY@YN5oETTeI1zWSW1
+!i122 22
+l103
+L73 176
+Vf7ZeAYQL`2Ab7`SYcI_So2
+!s100 3^DU7[EC8[<n_^C_gc@Wi2
+R17
+32
+R28
+!i10b 1
+R29
+R30
+R31
+!i113 0
+R22
+R23
+Efs_if_id_reg
+Z33 w1765266762
+R12
+R13
+R14
+!i122 23
+R2
+Z34 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd
+Z35 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd
+l0
+Z36 L10 1
+VX;P7K1T4gPLHRnLNY`R6m2
+!s100 YYDXhmG]QPV^ojzVWQ]782
+R17
+32
+Z37 !s110 1765266851
+!i10b 1
+Z38 !s108 1765266851.000000
+Z39 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd|
+Z40 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_if_id_reg.vhd|
+!i113 0
+R22
+R23
+Abehavior
+R12
+R13
+R14
+Z41 DEx4 work 12 fs_if_id_reg 0 22 X;P7K1T4gPLHRnLNY`R6m2
+!i122 23
+l36
+L28 39
+VAVIJZNJ<P?5fiLoKTAX?n1
+!s100 9HbYl1TOdo:?@aCekKo__1
+R17
+32
+R37
+!i10b 1
+R38
+R39
+R40
+!i113 0
+R22
+R23
+Efs_mem_wb_reg
+Z42 w1765266791
+R12
+R13
+R14
+!i122 24
+R2
+Z43 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd
+Z44 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd
+l0
+R36
+VSg30JJhdg>EfRo2X4LD<X2
+!s100 2R1Pf5]Rd5NY>7MPPY5PF1
+R17
+32
+Z45 !s110 1765266852
+!i10b 1
+Z46 !s108 1765266852.000000
+Z47 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd|
+Z48 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/fs_mem_wb_reg.vhd|
+!i113 0
+R22
+R23
+Abehavior
+R12
+R13
+R14
+Z49 DEx4 work 13 fs_mem_wb_reg 0 22 Sg30JJhdg>EfRo2X4LD<X2
+!i122 24
+l61
+L46 89
+VM<JoV?4hi?;dSL09fcOlh3
+!s100 T3L2Ak;6@8f[Q<GE1;lWd0
+R17
+32
+R45
+!i10b 1
+R46
+R47
+R48
+!i113 0
+R22
+R23
+Etb_pipeline_regs
+w1765160318
+R12
+R13
+R14
+!i122 9
+R2
+Z50 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd
+Z51 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd
+l0
+L5 1
+VN4Nk:EH]Q5Kb^K^7KG7D12
+!s100 QdEBWmELk8_CU5_7;k9o70
+R17
+32
+!s110 1765160322
+!i10b 1
+!s108 1765160322.000000
+Z52 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd|
+Z53 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_update_pipeline_reg.vhd|
+!i113 0
+R22
+R23
+Etb_pipeline_regs_all
+Z54 w1765266806
+R12
+R13
+R14
+!i122 25
+R2
+Z55 8/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_pipeline_regs_all.vhd
+Z56 F/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_pipeline_regs_all.vhd
+l0
+L5 1
+VC9@CP@3^HI[S=XS[MBl1?0
+!s100 oNEXT?U@m?LJBNWPk;zR=0
+R17
+32
+Z57 !s110 1765266855
+!i10b 1
+Z58 !s108 1765266855.000000
+Z59 !s90 -reportprogress|300|-work|work|/home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_pipeline_regs_all.vhd|
+Z60 !s107 /home/jwk0425/cpre381/proj2_sw/cpre3810-toolflow/proj/src/TopLevel/tb_pipeline_regs_all.vhd|
+!i113 0
+R22
+R23
+Asim
+R49
+R24
+R32
+R41
+R12
+R13
+R14
+DEx4 work 20 tb_pipeline_regs_all 0 22 C9@CP@3^HI[S=XS[MBl1?0
+!i122 25
+l146
+L8 488
+VAR>?21T@oeKV1TSB1FP<M1
+!s100 j5h4:B^8kAamYE^74^oDg2
+R17
+32
+R57
+!i10b 1
+R58
+R59
+R60
+!i113 0
+R22
+R23
+Etb_update_pipeline_reg
+Z61 w1765162725
+R12
+R13
+R14
+!i122 20
+R2
+R50
+R51
+l0
+L5 1
+V]_P?Ecz^mdPfEbFLzNI<b0
+!s100 D7XBCb]C9LBJzCBY:9IS=1
+R17
+32
+Z62 !s110 1765162729
+!i10b 1
+Z63 !s108 1765162729.000000
+R52
+R53
+!i113 0
+R22
+R23
+Atb
+R49
+DEx4 work 13 fs_ex_mem_reg 0 22 ;o6A2jnb0NFjh]lbLOJZd2
+R32
+R41
+R12
+R13
+R14
+DEx4 work 22 tb_update_pipeline_reg 0 22 ]_P?Ecz^mdPfEbFLzNI<b0
+!i122 20
+l131
+L8 454
+VW1c[Gn;E;fVP?k<W]eg;43
+!s100 =N>@Z2PR]3enGVV8:O06`2
+R17
+32
+R62
+!i10b 1
+R63
+R52
+R53
+!i113 0
+R22
+R23
